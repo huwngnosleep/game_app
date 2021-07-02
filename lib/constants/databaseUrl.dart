@@ -1,1 +1,1 @@
-const databaseUrl = "dadafwafwaf"
+const databaseUrl = "https://huwngbookkk-default-rtdb.firebaseio.com";
