@@ -69,17 +69,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  _userListTile(
-      BuildContext context, String title, String subtitle, int index) {
+  _userListTile(BuildContext context, String title, String subtitle, int index,
+      color, onPress) {
     return Material(
         color: Colors.transparent,
         child: InkWell(
-          child: ListTile(
-              title: Text(title),
-              subtitle: Text(subtitle),
-              leading: Icon(_userTitleIcons[index])),
-          onTap: () {},
-        ));
+            child: ListTile(
+          title: Text(title),
+          subtitle: Text(subtitle),
+          leading: Icon(_userTitleIcons[index], color: color),
+          onTap: onPress,
+        )));
   }
 
   @override
@@ -137,9 +137,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 _customItemsTitle("User Information"),
                 _customDivider(),
                 //user information
-                _userListTile(context, "Email", "example@example.com", 0),
-                _userListTile(context, "Phone", "0913115560", 1),
-                _userListTile(context, "Joined Date", "12/01/2002", 2),
+                _userListTile(context, "Email", "example@example.com", 0,
+                    Colors.cyan, () {}),
+                _userListTile(
+                    context, "Phone", "0913115560", 1, Colors.green, () {}),
+                _userListTile(
+                    context, "Joined Date", "12/01/2002", 2, null, () {}),
+                _userListTile(
+                    context, "Favorite games", "", 4, Colors.pink, () {}),
                 //
                 _customItemsTitle("Achievement"),
                 _customDivider(),
@@ -167,6 +172,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       width: MediaQuery.of(context).size.width,
                       height: 200.0,
                       child: ListView.builder(
+                        physics: NeverScrollableScrollPhysics(),
                           itemCount: userAchievement.length,
                           itemBuilder: (BuildContext context, int i) =>
                               _customList(userAchievement[i])),
@@ -177,7 +183,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 //setting ***************************************
                 _customItemsTitle("Settings"),
                 _customDivider(),
-                _userListTile(context, "Log out", "", 3)
+                _userListTile(context, "Log out", "", 3, null, () {})
               ]))
         ],
       ),
@@ -189,5 +195,6 @@ List<IconData> _userTitleIcons = [
   Icons.email,
   Icons.phone,
   Icons.watch_later,
-  Icons.exit_to_app_rounded
+  Icons.exit_to_app_rounded,
+  Icons.favorite
 ];

@@ -1,7 +1,1 @@
-class AppProvider {
-  data = ....
-  get getData() {
-
-  }
-
-}
+class AppProvider {}
