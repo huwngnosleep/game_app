@@ -11,7 +11,6 @@ class GameInformation extends StatelessWidget {
       width: 280,
       height: 160,
       child: Swiper(
-
         index: 0,
         itemBuilder: (BuildContext context, int index) {
           return Container(
@@ -23,7 +22,8 @@ class GameInformation extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 20.0),
                   child: Text(
                     listGame[index].name,
-                    style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
+                    style:
+                        TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
                   ),
                 ),
                 Padding(
@@ -33,7 +33,8 @@ class GameInformation extends StatelessWidget {
                     listGame[index].description,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
-                    style: TextStyle(fontSize: 13.0, fontWeight: FontWeight.w500),
+                    style:
+                        TextStyle(fontSize: 13.0, fontWeight: FontWeight.w500),
                   ),
                 ),
                 Padding(
@@ -42,7 +43,8 @@ class GameInformation extends StatelessWidget {
                     "${listGame[index].people} people has been played",
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
-                    style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w400),
+                    style:
+                        TextStyle(fontSize: 16.0, fontWeight: FontWeight.w400),
                   ),
                 ),
                 Text(

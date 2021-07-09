@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "936950581927",
+    "firebase_url": "https://flutter-app-b5379-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "flutter-app-b5379",
+    "storage_bucket": "flutter-app-b5379.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936950581927:android:1f33a793bf93c3703b2982",
+        "android_client_info": {
+          "package_name": "com.example.game_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "936950581927-2kd1v8h5rqi6f30dsf83p7m5v6ij3rnq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0zE8yHceOXmn4p-RdVLlP-IvS0i95mJs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "936950581927-2kd1v8h5rqi6f30dsf83p7m5v6ij3rnq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
