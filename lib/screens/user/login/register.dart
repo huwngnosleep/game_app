@@ -8,23 +8,13 @@ class RegisterScreen extends StatefulWidget {
 }
 
 class _RegisterScreenState extends State<RegisterScreen> {
-  TextEditingController _controller;
-  String email = "";
-  String password = "";
-  String name = "";
+  String _email = "";
+  String _password = "";
+  String _name = "";
 
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    _controller = TextEditingController();
-  }
-
-  @override
-  void dispose() {
-    // TODO: implement dispose
-    super.dispose();
-    _controller.dispose();
+  register() async {
+    // await FirebaseAuth.instance.signInWithEmailAndPassword(
+    //     email: _emailController.text, password: _passwordController.text);
   }
 
   @override
@@ -70,7 +60,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     child: TextField(
                       keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(labelText: "Email"),
-                      onChanged: (text) => _setEmail(text),
+                      onChanged: (text) => setState(() {
+                        _email = text;
+                      }),
                     ),
                   ),
                   SizedBox(height: 20.0),
@@ -81,7 +73,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       //hidden password
                       obscureText: true,
                       decoration: InputDecoration(labelText: "Password"),
-                      onChanged: (text) => _setPass(text),
+                      onChanged: (text) => setState(() {
+                        _password = text;
+                      }),
                     ),
                   ),
                   SizedBox(height: 20.0),
@@ -90,7 +84,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     child: TextField(
                       keyboardType: TextInputType.name,
                       decoration: InputDecoration(labelText: "Name"),
-                      onChanged: (text) => _setName(text),
+                      onChanged: (text) => setState(() {
+                        _name = text;
+                      }),
                     ),
                   ),
                   SizedBox(height: 50.0),
@@ -98,16 +94,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     width: MediaQuery.of(context).size.width * 0.7,
                     height: 45.0,
                     child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: register,
                         child: Text(
                           "Sign up",
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               fontSize: 18.0,
                               fontWeight: FontWeight.bold,
-                              color: (email.isNotEmpty &&
-                                      password.isNotEmpty &&
-                                      name.isNotEmpty)
+                              color: (_email.isNotEmpty &&
+                                      _name.isNotEmpty &&
+                                      _password.isNotEmpty)
                                   ? Colors.white
                                   : Colors.grey),
                         )),
@@ -124,23 +120,5 @@ class _RegisterScreenState extends State<RegisterScreen> {
             ),
           ],
         ));
-  }
-
-  _setEmail(String text) {
-    setState(() {
-      email = text;
-    });
-  }
-
-  _setPass(String text) {
-    setState(() {
-      password = text;
-    });
-  }
-
-  _setName(String text) {
-    setState(() {
-      name = text;
-    });
   }
 }
