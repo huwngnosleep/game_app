@@ -56,10 +56,12 @@ flutter:
     - assets/images/taptheblack.png
     - assets/images/snake.png
     - assets/images/follow.jpg
-    - assets/images/play.jpg
-    - assets/images/game.jpg
-    - assets/images/rank.jpg
+    - assets/images/play.png
     - assets/images/wheel.png
+    - assets/images/rate.png
+    - assets/images/fb.png
+    - assets/images/hotandnew.png
+    - assets/images/rank.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
