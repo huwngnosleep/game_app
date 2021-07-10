@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:game_app/providers/AuthenticationSeverice.dart';
 import 'package:game_app/providers/game_provider.dart';
 import 'package:game_app/screens/user/home/game.dart';
+import 'package:game_app/screens/user/home/home.dart';
 import 'package:game_app/screens/user/login/main_screen.dart';
 import 'package:game_app/screens/user/login/register.dart';
 import 'package:provider/provider.dart';
@@ -26,7 +27,7 @@ class _MyAppState extends State<MyApp> {
       ],
       builder: (context, chill) => MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: MainScreen(),
+        home: HomeScreen(),
         routes: <String, WidgetBuilder>{
           '/register': (BuildContext context) => RegisterScreen(),
           '/login': (BuildContext context) => LoginScreen(),

@@ -30,7 +30,8 @@ class GameProvider with ChangeNotifier {
   List<Game> favoriteGame() =>
       _listGame.where((element) => element.isFavorite).toList();
 
-  List<Game> hotGame() => _listGame.where((element) => element.isHot).toList();
+  List<Game> hotAndNewGame() =>
+      _listGame.where((element) => element.isHot).toList();
 
-  List<Game> newGame() => _listGame.where((element) => element.isNew).toList();
+  // List<Game> newGame() => _listGame.where((element) => element.isNew).toList();
 }
