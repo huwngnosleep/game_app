@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
-import 'package:game_app/components/taptheblakc/block.dart';
+import 'package:game_app/components/taptheblack/block.dart';
 
 class BlocksGrid extends StatelessWidget {
   final List<int> blockKeys;

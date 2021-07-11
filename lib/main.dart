@@ -6,6 +6,7 @@ import 'package:game_app/screens/game/taptheblack/game_screen.dart';
 import 'package:game_app/screens/user/home/game.dart';
 import 'package:game_app/screens/user/home/home.dart';
 import 'package:game_app/screens/user/home/profile.dart';
+import 'package:game_app/screens/user/home/wheel.dart';
 import 'package:game_app/screens/user/login/main_screen.dart';
 import 'package:game_app/screens/user/login/register.dart';
 import 'package:provider/provider.dart';
@@ -38,6 +39,7 @@ class _MyAppState extends State<MyApp> {
           '/register': (BuildContext context) => RegisterScreen(),
           '/login': (BuildContext context) => LoginScreen(),
           '/game': (BuildContext context) => GameScreen(),
+          '/wheel': (BuildContext context) => WheelScreen(),
           '/user': (BuildContext context) => ProfileScreen(),
           '/chart': (BuildContext context) => ChartScreen(),
           '/snake': (BuildContext context) => HomeSnake(),

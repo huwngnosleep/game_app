@@ -101,7 +101,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     background: Stack(
                       children: [
                         SizedBox(
-                          height: 200,
+                          height: 220,
                           width: MediaQuery.of(context).size.width,
                           child: Image(
                             fit: BoxFit.fill,

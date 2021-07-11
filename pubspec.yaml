@@ -34,6 +34,8 @@ dependencies:
   cached_network_image: ^3.0.0
   http: ^0.13.3
   badges: ^2.0.1
+  flutter_fortune_wheel: ^1.1.0
+  confetti: ^0.6.0-nullsafety
   
 dev_dependencies:
   flutter_test:
@@ -62,6 +64,9 @@ flutter:
     - assets/images/fb.png
     - assets/images/hotandnew.png
     - assets/images/rank.png
+    - assets/images/button.png
+    - assets/images/gameboard.png
+    - assets/images/info.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

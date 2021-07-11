@@ -3,9 +3,9 @@ import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:game_app/components/taptheblakc/blocks_grid.dart';
-import 'package:game_app/components/taptheblakc/custom_button.dart';
-import 'package:game_app/components/taptheblakc/score_chart.dart';
+import 'package:game_app/components/taptheblack/blocks_grid.dart';
+import 'package:game_app/components/taptheblack/custom_button.dart';
+import 'package:game_app/components/taptheblack/score_chart.dart';
 
 class TapTheBlackScreen extends StatefulWidget {
   @override

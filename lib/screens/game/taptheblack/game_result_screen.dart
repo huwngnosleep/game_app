@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:game_app/components/taptheblakc/custom_button.dart';
+import 'package:game_app/components/taptheblack/custom_button.dart';
 
 class TapResult extends StatefulWidget {
   @override

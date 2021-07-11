@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
                 children: [
                   InkWell(
-                    onTap: () {},
+                    onTap: () => Navigator.of(context).pushNamed("/wheel"),
                     child: Badge(
                       position: BadgePosition(top: -2, end: -2),
                       child: Container(
@@ -94,9 +94,14 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Container(
                       width: 60.0,
                       height: 55.0,
-                      child: Image.asset(
-                        "assets/images/fb.png",
-                        fit: BoxFit.fill,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              fit: BoxFit.fill,
+                              image: AssetImage("assets/images/button.png"))),
+                      child: Icon(
+                        Icons.person,
+                        size: 26.0,
+                        color: Colors.white,
                       ),
                     ),
                   ),

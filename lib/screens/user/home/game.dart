@@ -21,7 +21,7 @@ class _GameScreenState extends State<GameScreen> {
         ),
         backgroundColor: Colors.grey,
         body: Container(
-          padding: const EdgeInsets.only(top: 30.0),
+          padding: const EdgeInsets.only(top: 30),
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           child: Swiper(
@@ -31,9 +31,22 @@ class _GameScreenState extends State<GameScreen> {
                   Stack(
                     children: [
                       Container(
-                        child: Image.network(
-                          listGame[index].imgUrl,
-                          fit: BoxFit.fill,
+                        width: 300,
+                        height: 290,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10.0),
+                            image: DecorationImage(
+                                image:
+                                    AssetImage("assets/images/gameboard.png"),
+                                fit: BoxFit.fill)),
+                        child: Container(
+                          margin: const EdgeInsets.all(10.0),
+                          child: Container(
+                            child: Image.asset(
+                              listGame[index].imgUrl,
+                              fit: BoxFit.scaleDown,
+                            ),
+                          ),
                         ),
                       ),
                       Positioned(
@@ -79,7 +92,10 @@ class _GameScreenState extends State<GameScreen> {
                   SizedBox(height: 40),
                   Container(
                     width: 250.0,
-                    color: Colors.white,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assets/images/info.png"),
+                            fit: BoxFit.fill)),
                     child: Column(
                       children: [
                         Padding(
@@ -88,17 +104,6 @@ class _GameScreenState extends State<GameScreen> {
                             listGame[index].name,
                             style: TextStyle(
                                 fontSize: 24.0, fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
-                              vertical: 10.0, horizontal: 10.0),
-                          child: Text(
-                            listGame[index].description,
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                            style: TextStyle(
-                                fontSize: 13.0, fontWeight: FontWeight.w500),
                           ),
                         ),
                         Padding(
@@ -111,12 +116,15 @@ class _GameScreenState extends State<GameScreen> {
                                 fontSize: 16.0, fontWeight: FontWeight.w400),
                           ),
                         ),
-                        Text(
-                          "Rate: ${listGame[index].rate}/5.0",
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          style: TextStyle(
-                              fontSize: 16.0, fontWeight: FontWeight.w400),
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 10.0),
+                          child: Text(
+                            "Rate: ${listGame[index].rate}/5.0",
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                                fontSize: 16.0, fontWeight: FontWeight.w400),
+                          ),
                         ),
                       ],
                     ),

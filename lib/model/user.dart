@@ -1,6 +1,6 @@
 class User {
   final String uid;
   final String name;
-
-  User(this.uid, this.name);
+  final String imgUrl;
+  User(this.uid, this.name, this.imgUrl);
 }

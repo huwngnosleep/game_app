@@ -3,25 +3,9 @@ import 'package:game_app/model/game_display.dart';
 
 class GameProvider with ChangeNotifier {
   List<Game> _listGame = [
-    Game(
-        "tap the black",
-        "http://via.placeholder.com/300x300",
-        true,
-        false,
-        true,
-        "Tap The Black",
-        "asdjiadjifjlsdfjslkdgjslkgjslkdjgslkdjfsjdfiosjdigfsjd",
-        100,
-        4.9),
-    Game(
-        "snake",
-        "http://via.placeholder.com/300x300",
-        false,
-        true,
-        true,
-        "Snake",
-        "dhasuhasudhuagfhoisfnvnmcx,zhvuiweoierjwsalifjmsalfjaspf",
-        199,
+    Game("taptheblack", "assets/images/taptheblack.png", true, false, true,
+        "Tap The Black", 100, 4.9),
+    Game("snake", "assets/images/snake.png", false, true, true, "Snake", 199,
         4.5)
   ];
 
