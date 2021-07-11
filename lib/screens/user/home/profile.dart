@@ -98,9 +98,27 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   child: FlexibleSpaceBar(
                     collapseMode: CollapseMode.parallax,
                     centerTitle: true,
-                    background: Image(
-                      fit: BoxFit.cover,
-                      image: NetworkImage(cover),
+                    background: Stack(
+                      children: [
+                        SizedBox(
+                          height: 200,
+                          width: MediaQuery.of(context).size.width,
+                          child: Image(
+                            fit: BoxFit.fill,
+                            image: NetworkImage(cover),
+                          ),
+                        ),
+                        Positioned(
+                          left: 10,
+                          top: 10,
+                          child: IconButton(
+                              onPressed: () => Navigator.of(context).pop(),
+                              icon: Icon(
+                                Icons.arrow_back_ios,
+                                color: Colors.purpleAccent,
+                              )),
+                        ),
+                      ],
                     ),
                     title: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -172,7 +190,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       width: MediaQuery.of(context).size.width,
                       height: 200.0,
                       child: ListView.builder(
-                        physics: NeverScrollableScrollPhysics(),
+                          physics: NeverScrollableScrollPhysics(),
                           itemCount: userAchievement.length,
                           itemBuilder: (BuildContext context, int i) =>
                               _customList(userAchievement[i])),

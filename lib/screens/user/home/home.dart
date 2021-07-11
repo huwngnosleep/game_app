@@ -28,6 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   InkWell(
                     onTap: () {},
                     child: Badge(
+                      position: BadgePosition(top: -2, end: -2),
                       child: Container(
                         decoration: BoxDecoration(
                             borderRadius:
@@ -39,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           fit: BoxFit.fitWidth,
                         ),
                       ),
-                      badgeContent: Text("1",
+                      badgeContent: Text("!",
                           style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold)),
@@ -68,7 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   SizedBox(height: 20),
                   InkWell(
-                    hoverColor: Color(0xFF577de2),
+                    splashColor: Color(0xFF577de2),
                     onTap: () => Navigator.of(context)
                         .pushNamed('/chart', arguments: {0}),
                     child: Container(
@@ -88,7 +89,20 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
                 children: [
                   InkWell(
-                    hoverColor: Color(0xFF577de2),
+                    splashColor: Color(0xFF577de2),
+                    onTap: () => Navigator.of(context).pushNamed("/user"),
+                    child: Container(
+                      width: 60.0,
+                      height: 55.0,
+                      child: Image.asset(
+                        "assets/images/fb.png",
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  InkWell(
+                    splashColor: Color(0xFF577de2),
                     onTap: () {},
                     child: Container(
                       width: 60.0,
@@ -99,9 +113,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 30),
+                  SizedBox(height: 20),
                   InkWell(
-                    hoverColor: Color(0xFF577de2),
+                    splashColor: Color(0xFF577de2),
                     onTap: () {},
                     child: Container(
                       width: 60.0,
@@ -118,7 +132,7 @@ class _HomeScreenState extends State<HomeScreen> {
               top: MediaQuery.of(context).size.height / 3,
               left: MediaQuery.of(context).size.width / 2 - 100.0,
               child: InkWell(
-                hoverColor: Color(0xFFec5449),
+                splashColor: Color(0xFFec5449),
                 onTap: () => Navigator.of(context).pushNamed("/game"),
                 child: Container(
                     width: 200,

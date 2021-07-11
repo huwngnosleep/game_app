@@ -3,7 +3,7 @@ import 'package:game_app/api/api_server.dart';
 import 'package:game_app/model/login_model.dart';
 import 'package:game_app/model/user.dart';
 import 'package:game_app/providers/AuthenticationSeverice.dart';
-import 'package:game_app/screens/user/home/bottom_bar.dart';
+import 'package:game_app/screens/user/home/home.dart';
 import 'package:wave/config.dart';
 import 'package:wave/wave.dart';
 
@@ -42,7 +42,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   .showSnackBar(SnackBar(content: Text("Login Successful!"))),
               Navigator.of(context).pushAndRemoveUntil(
                   MaterialPageRoute(
-                      builder: (BuildContext context) => BottomBar()),
+                      builder: (BuildContext context) => HomeScreen()),
                   (route) => false)
             }
           else

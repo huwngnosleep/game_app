@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:game_app/providers/AuthenticationSeverice.dart';
 import 'package:game_app/providers/game_provider.dart';
-import 'package:game_app/screens/user/home/bottom_bar.dart';
+import 'package:game_app/screens/game/snake/snake_screen.dart';
+import 'package:game_app/screens/game/taptheblack/game_screen.dart';
 import 'package:game_app/screens/user/home/game.dart';
 import 'package:game_app/screens/user/home/home.dart';
+import 'package:game_app/screens/user/home/profile.dart';
 import 'package:game_app/screens/user/login/main_screen.dart';
 import 'package:game_app/screens/user/login/register.dart';
 import 'package:provider/provider.dart';
+import 'screens/game/snake/home.dart';
+import 'screens/game/taptheblack/game_result_screen.dart';
 import 'screens/user/home/chart.dart';
 import 'screens/user/login/login.dart';
 
@@ -29,12 +33,17 @@ class _MyAppState extends State<MyApp> {
       ],
       builder: (context, chill) => MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: BottomBar(),
+        home: HomeScreen(),
         routes: <String, WidgetBuilder>{
           '/register': (BuildContext context) => RegisterScreen(),
           '/login': (BuildContext context) => LoginScreen(),
           '/game': (BuildContext context) => GameScreen(),
-          '/chart': (BuildContext context) => ChartScreen()
+          '/user': (BuildContext context) => ProfileScreen(),
+          '/chart': (BuildContext context) => ChartScreen(),
+          '/snake': (BuildContext context) => HomeSnake(),
+          '/playsnake': (BuildContext context) => SnakeGame(),
+          '/taptheblack': (BuildContext context) => TapTheBlackScreen(),
+          '/tapresult': (BuildContext context) => TapResult()
         },
       ),
     );

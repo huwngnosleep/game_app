@@ -15,7 +15,10 @@ class _GameScreenState extends State<GameScreen> {
   Widget build(BuildContext context) {
     final listGame = Provider.of<GameProvider>(context).listGame;
     return Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+        ),
         backgroundColor: Colors.grey,
         body: Container(
           padding: const EdgeInsets.only(top: 30.0),
@@ -121,6 +124,9 @@ class _GameScreenState extends State<GameScreen> {
                 ],
               );
             },
+            onTap: (index) {
+              Navigator.of(context).pushNamed(getRouteName(index));
+            },
             itemCount: listGame.length,
             autoplay: true,
             loop: true,
@@ -130,5 +136,17 @@ class _GameScreenState extends State<GameScreen> {
             index: 0,
           ),
         ));
+  }
+
+  String getRouteName(int index) {
+    switch (index) {
+      case 0:
+        return "/taptheblack";
+      case 1:
+        return "/snake";
+      default:
+        break;
+    }
+    return "";
   }
 }
